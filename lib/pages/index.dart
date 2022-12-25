@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Row(
               children: [
@@ -38,6 +38,26 @@ class _MyHomePageState extends State<MyHomePage> {
                 Image.asset('assets/images/K.png', scale: 4,),
               ],
             ),
+            // Row(
+            //   children: [
+            //    
+            //   ],
+            // ),
+            Container(
+              padding: const EdgeInsets.all(10.0),
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [
+                      Colors.purple,
+                      Colors.grey,
+                    ],
+                  ),
+              ),
+              alignment: Alignment.centerRight,
+              child: Image.asset('assets/images/K2.png'),
+            ),
             Column(
               children: [
                 const Text(
@@ -49,22 +69,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  color: Colors.purple[800],
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Text(
-                      '2022 \u00a9 Eqra Khattak',
-                      style: TextStyle(
-                        color: Colors.grey[300],
-                      ),
-                    ),
-                  ),
+            Container(
+              alignment: Alignment.center,
+              color: Colors.purple[800],
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                '2022 \u00a9 Eqra Khattak',
+                style: TextStyle(
+                  color: Colors.grey[300],
                 ),
-              ],
+              ),
             )
           ],
         ),
