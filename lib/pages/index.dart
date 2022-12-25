@@ -22,6 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
+
             Row(
               children: [
                 Image.asset('assets/images/E3.png', scale: 4,),
@@ -38,36 +39,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 Image.asset('assets/images/K.png', scale: 4,),
               ],
             ),
-            // Row(
-            //   children: [
-            //    
-            //   ],
-            // ),
             Container(
               padding: const EdgeInsets.all(10.0),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                     colors: [
-                      Colors.purple,
+                      Colors.purple[800]!,
                       Colors.grey,
                     ],
                   ),
               ),
-              alignment: Alignment.centerRight,
-              child: Image.asset('assets/images/K2.png'),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'A Flutter developer who loves to develop mobile apps and websites in Flutter.',
+                    style: TextStyle(
+                      fontFamily: 'Lacquer',
+                      fontSize: 20.0,
+                      color: Colors.grey[300],
+                    ),
+                  ),
+                  Image.asset('assets/images/mine.png'),
+                ],
+              ),
             ),
-            Column(
-              children: [
-                const Text(
-                  'A Flutter developer who loves to develop mobile apps and websites in Flutter.',
-                ),
-                Text(
-                  'counter2022',
-                  style: Theme.of(context).textTheme.headline4,
-                ),
-              ],
+            const SizedBox(
+              height: 30.0,
             ),
             Container(
               alignment: Alignment.center,
