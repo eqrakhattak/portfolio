@@ -68,6 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
           const Heading(lable: 'My Interests'),
           const SizedBox(height: 30.0,),
           const Heading(lable: 'Tech Talks'),
+          Row(
+            children: const [
+
+            ],
+          ),
           const SizedBox(height: 30.0,),
           const Heading(lable: 'Socials'),
           const SizedBox(height: 30.0,),
