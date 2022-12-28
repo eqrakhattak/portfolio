@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TalkTile extends StatelessWidget {
 
   final String title;
   final String imgPath;
   final String location;
+  final String talkUrl;
 
-  const TalkTile({required this.title, required this.imgPath, required this.location});
+  const TalkTile({required this.title, required this.imgPath, required this.location, required this.talkUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class TalkTile extends StatelessWidget {
       child: InkWell(
         splashColor: Colors.purple[800]!.withAlpha(30),
         onTap: (){
-          print('card tapped');
+          launchUrl(Uri.parse(talkUrl));
         },
         child: Padding(
           padding: const EdgeInsets.all(8.0),

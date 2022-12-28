@@ -72,12 +72,12 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-              TalkTile(imgPath: 'assets/images/airukamra.jpg', title: 'Getting To Know Flutter', location: 'Air U Kamra',),
-              TalkTile(imgPath: 'assets/images/devfest20cloud.jpg', title: 'Cloud Seekho', location: 'GDG Cloud Devfest20',),
-              TalkTile(imgPath: 'assets/images/gdgglobal.jpg', title: 'Being Steminist', location: 'GDG Global',),
-              TalkTile(imgPath: 'assets/images/gdscliveflutter.jpg', title: 'Flutter.py', location: 'GDSC Pakistan',),
-              TalkTile(imgPath: 'assets/images/gdscpak.jpg', title: 'Become A Community Builder', location: 'GDSC Pakistan',),
-              TalkTile(imgPath: 'assets/images/devfestlive.jpg', title: 'GDSC Panel Discussion', location: 'GDG Live Devfest21',),
+              TalkTile(imgPath: 'assets/images/airukamra.jpg', title: 'Getting To Know Flutter', location: 'Air U Kamra', talkUrl: 'https://www.facebook.com/photo/?fbid=1355197304917077&set=pcb.1355202514916556',),
+              TalkTile(imgPath: 'assets/images/devfest20cloud.jpg', title: 'Cloud Seekho', location: 'GDG Cloud Devfest20', talkUrl: 'https://www.youtube.com/watch?v=1jciVUUM-LA',),
+              TalkTile(imgPath: 'assets/images/gdgglobal.jpg', title: 'Being Steminist', location: 'GDG Global', talkUrl: 'https://fb.watch/hIfAqPy129/',),
+              TalkTile(imgPath: 'assets/images/gdscliveflutter.jpg', title: 'Flutter.py', location: 'GDSC Pakistan', talkUrl: 'https://fb.watch/hIfo957U2N/',),
+              TalkTile(imgPath: 'assets/images/gdscpak.jpg', title: 'Become A Community Builder', location: 'GDSC Pakistan', talkUrl: 'https://fb.watch/hIgjiq4P4M/',),
+              TalkTile(imgPath: 'assets/images/devfestlive.jpg', title: 'GDSC Panel Discussion', location: 'GDG Live Devfest21', talkUrl: 'https://www.youtube.com/watch?v=FunbfXt38ew',),
             ],
           ),
           const SizedBox(height: 30.0,),
