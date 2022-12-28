@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/headings.dart';
+import 'package:portfolio/components/talktiles.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -69,8 +70,14 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(height: 30.0,),
           const Heading(lable: 'Tech Talks'),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-
+              TalkTile(imgPath: 'assets/images/airukamra.jpg', title: 'Getting To Know Flutter', location: 'Air U Kamra',),
+              TalkTile(imgPath: 'assets/images/devfest20cloud.jpg', title: 'Cloud Seekho', location: 'GDG Cloud Devfest20',),
+              TalkTile(imgPath: 'assets/images/gdgglobal.jpg', title: 'Being Steminist', location: 'GDG Global',),
+              TalkTile(imgPath: 'assets/images/gdscliveflutter.jpg', title: 'Flutter.py', location: 'GDSC Pakistan',),
+              TalkTile(imgPath: 'assets/images/gdscpak.jpg', title: 'Become A Community Builder', location: 'GDSC Pakistan',),
+              TalkTile(imgPath: 'assets/images/devfestlive.jpg', title: 'GDSC Panel Discussion', location: 'GDG Live Devfest21',),
             ],
           ),
           const SizedBox(height: 30.0,),
