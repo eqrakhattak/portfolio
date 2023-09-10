@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/constants.dart';
 
 class Heading extends StatelessWidget {
 
   final String lable;
 
-  const Heading({required this.lable});
+  const Heading({super.key, required this.lable});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       lable,
-      style: TextStyle(
+      style: const TextStyle(
         fontFamily: 'Londrina Outline',
         fontSize: 45.0,
-        color: Colors.purple[800],
+        color: charcoal,
         fontWeight: FontWeight.bold,
       ),
       textAlign: TextAlign.center,

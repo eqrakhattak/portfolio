@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TalkTile extends StatelessWidget {
@@ -8,12 +9,18 @@ class TalkTile extends StatelessWidget {
   final String location;
   final String talkUrl;
 
-  const TalkTile({required this.title, required this.imgPath, required this.location, required this.talkUrl});
+  const TalkTile({
+    super.key,
+    required this.title,
+    required this.imgPath,
+    required this.location,
+    required this.talkUrl
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.grey[600],
+      color: sandyBrown,
       child: InkWell(
         splashColor: Colors.purple[800]!.withAlpha(30),
         onTap: (){
@@ -25,14 +32,24 @@ class TalkTile extends StatelessWidget {
             children: [
               Image.asset(imgPath, scale: 5,),
               const SizedBox(height: 8.0),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Column(
                 children: [
-                  Text(title),
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      color: charcoal,
+                      fontSize: 20
+                    ),
+                  ),
                   Row(
                     children: [
-                      const Icon(Icons.location_on_outlined),
-                      Text(location),
+                      const Icon(Icons.location_on_outlined, color: charcoal,),
+                      Text(
+                        location,
+                        style: const TextStyle(
+                          color: charcoal,
+                        ),
+                      ),
                     ],
                   ),
                 ],
