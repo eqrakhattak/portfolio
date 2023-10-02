@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Color(0xFFE9C46A),
                       ),
                     ),
-                    Image.asset('assets/images/mine.png'),
+                    Image.asset('assets/images/profilepic.png'),
                   ],
                 ),
               ],
