@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/components/headings.dart';
 import 'package:portfolio/components/talktiles.dart';
 import 'package:portfolio/constants.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -18,24 +19,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(widget.title),
-      // ),
       body: ListView(
         children: [
           Container(
             padding: const EdgeInsets.all(10.0),
             color: charcoal,
-            // decoration: BoxDecoration(
-            //   gradient: LinearGradient(
-            //     begin: Alignment.bottomCenter,
-            //     end: Alignment.topCenter,
-            //     colors: [
-            //       Colors.purple[800]!,
-            //       Colors.grey,
-            //     ],
-            //   ),
-            // ),
             child: Column(
               children: [
                 Row(
@@ -151,22 +139,40 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           const SizedBox(height: 30.0,),
-          const Heading(lable: 'Socials'),
+          const Heading(lable: 'Let\'s Work Together'),
           const SizedBox(height: 30.0,),
           Container(
             alignment: Alignment.center,
             color: charcoal,
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(30.0),
             child: Column(
               children: [
-                Image.asset('assets/images/logo.png', height: 80, width: 80,),
-                const SizedBox(height: 10,),
+                Image.asset('assets/images/logo.png', scale: 50,),
+                const SizedBox(height: 10),
                 const Text(
-                  '2023 \u00a9 Eqra Khattak',
+                  '2023 \u00a9 Eqra Khattak | All rights reserved | Built with ❤️ by Flutter',
                   style: TextStyle(
-                    color: saffron,
+                    color: Color(0xFF4C829A),
                   ),
                 ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      onPressed: () => launchUrl(Uri.parse('https://www.instagram.com/eqrakhattak')),
+                      icon: const FaIcon(FontAwesomeIcons.instagram, color: saffron, size: 30,),
+                    ),
+                    IconButton(
+                      onPressed: () => launchUrl(Uri.parse('https://www.linkedin.com/in/eqrakhattak')),
+                      icon: const FaIcon(FontAwesomeIcons.linkedinIn, color: saffron, size: 30,),
+                    ),
+                    IconButton(
+                      onPressed: () => launchUrl(Uri.parse('https://github.com/eqrakhattak')),
+                      icon: const FaIcon(FontAwesomeIcons.github, color: saffron, size: 30,),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
