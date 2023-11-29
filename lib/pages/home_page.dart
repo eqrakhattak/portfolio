@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Container(
             padding: const EdgeInsets.all(10.0),
-            color: const Color(0xFF264653),
+            color: charcoal,
             // decoration: BoxDecoration(
             //   gradient: LinearGradient(
             //     begin: Alignment.bottomCenter,
@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(
                         fontFamily: 'Lacquer',
                         fontSize: 20.0,
-                        color: Color(0xFFE9C46A),
+                        color: saffron,
                       ),
                     ),
                     Image.asset('assets/images/profilepic.png'),
@@ -157,11 +157,17 @@ class _MyHomePageState extends State<MyHomePage> {
             alignment: Alignment.center,
             color: charcoal,
             padding: const EdgeInsets.all(20.0),
-            child: const Text(
-              '2023 \u00a9 Eqra Khattak',
-              style: TextStyle(
-                color: saffron,
-              ),
+            child: Column(
+              children: [
+                Image.asset('assets/images/logo.png', height: 80, width: 80,),
+                const SizedBox(height: 10,),
+                const Text(
+                  '2023 \u00a9 Eqra Khattak',
+                  style: TextStyle(
+                    color: saffron,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
