@@ -22,6 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: [
           Container(
+            height: MediaQuery.sizeOf(context).height,
             padding: const EdgeInsets.all(10.0),
             color: charcoal,
             child: Column(
@@ -59,88 +60,146 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          const SizedBox(height: 30.0,),
-          const Heading(lable: 'My Interests'),
-          const SizedBox(height: 30.0,),
+          const SizedBox(height: 80.0),
+          const Heading(lable: 'Recent Work'),
+          const SizedBox(height: 30.0),
           const Heading(lable: 'Tech Talks'),
-          const SizedBox(height: 20.0,),
+          const SizedBox(height: 50.0),
           const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TalkTile(
-                  imgPath: 'assets/images/airukamra.jpg',
-                  title: 'Getting To Know Flutter',
-                  location: 'Air U, Kamra',
-                  talkUrl: 'https://www.facebook.com/photo/?fbid=1355197304917077&set=pcb.1355202514916556',
+                  title: 'Next Gen UIs',
+                  imgPath: 'assets/images/ffe23.jpg',
+                  location: 'Daftarkhawan',
+                  talkUrl: 'https://www.facebook.com/photo?fbid=690085339826089&set=pcb.690119189822704',
                 ),
                 TalkTile(
-                  imgPath: 'assets/images/devfest20cloud.jpg',
-                  title: 'Cloud Seekho',
-                  location: 'GDG Cloud Devfest20',
-                  talkUrl: 'https://www.youtube.com/watch?v=1jciVUUM-LA',
-                ),
-                TalkTile(
-                  imgPath: 'assets/images/gdgglobal.jpg',
-                  title: 'Being Steminist',
-                  location: 'GDG Global',
-                  talkUrl: 'https://fb.watch/hIfAqPy129/',
-                ),
-                TalkTile(
-                  imgPath: 'assets/images/gdscliveflutter.jpg',
-                  title: 'Flutter.py',
-                  location: 'GDSC Pakistan',
-                  talkUrl: 'https://fb.watch/hIfo957U2N/',
-                ),
-                TalkTile(
-                  imgPath: 'assets/images/gdscpak.jpg',
-                  title: 'Become A Community Builder',
-                  location: 'GDSC Pakistan',
-                  talkUrl: 'https://fb.watch/hIgjiq4P4M/',
-                ),
-                TalkTile(
-                  imgPath: 'assets/images/devfestlive.jpg',
-                  title: 'GDSC Panel Discussion',
-                  location: 'GDG Live Devfest21',
-                  talkUrl: 'https://www.youtube.com/watch?v=FunbfXt38ew',
-                ),
-                TalkTile(
-                  imgPath: 'assets/images/colleen.jpg',
-                  title: 'Colleen - A Tech Queen',
-                  location: 'GDSC Pakistan',
-                  talkUrl: 'https://fb.watch/nqKP5RTAet/',
-                ),
-                TalkTile(
-                  imgPath: 'assets/images/harfanaurat.png',
-                  title: 'Harfan Aurat',
-                  location: 'GDSC Superior University',
-                  talkUrl: 'https://fb.watch/nqKgTvJcCE/',
-                ),
-                TalkTile(
-                  imgPath: 'assets/images/',
-                  title: 'What is Flutter?',
-                  location: 'Comsats University, Attock',
-                  talkUrl: 'https://www.facebook.com/gdsccuiatk/photos/pcb.665110278229428/665109588229497/',
-                ),
-                TalkTile(
-                  imgPath: 'assets/images/techfeb22.jpg',
                   title: 'Flutter Keynote',
+                  imgPath: 'assets/images/techfeb22.jpg',
                   location: 'Global TechFeb22',
                   talkUrl: 'https://youtu.be/v2G6dHwZhes?t=410',
                 ),
                 TalkTile(
-                    title: 'Next Gen UIs',
-                    imgPath: 'assets/images/ffe23.jpg',
-                    location: 'Daftarkhawan',
-                    talkUrl: 'https://www.facebook.com/photo?fbid=690085339826089&set=pcb.690119189822704'
+                  title: 'What is Flutter?',
+                  imgPath: 'assets/images/cuiseminar.png',
+                  location: 'Comsats University, Attock',
+                  talkUrl: 'https://www.facebook.com/gdsccuiatk/photos/pcb.665110278229428/665109588229497/',
+                ),
+                TalkTile(
+                  title: 'Flutter.py',
+                  imgPath: 'assets/images/gdscliveflutter.jpg',
+                  location: 'GDSC Pakistan',
+                  talkUrl: 'https://fb.watch/hIfo957U2N/',
+                ),
+                TalkTile(
+                  title: 'GDSC Panel Discussion',
+                  imgPath: 'assets/images/devfestlive.jpg',
+                  location: 'GDG Live Devfest21',
+                  talkUrl: 'https://www.youtube.com/watch?v=FunbfXt38ew',
+                ),
+                TalkTile(
+                  title: 'Become A Community Builder',
+                  imgPath: 'assets/images/gdscpak.jpg',
+                  location: 'GDSC Pakistan',
+                  talkUrl: 'https://fb.watch/hIgjiq4P4M/',
+                ),
+                TalkTile(
+                  title: 'Being Steminist',
+                  imgPath: 'assets/images/gdgglobal.jpg',
+                  location: 'GDG Global',
+                  talkUrl: 'https://fb.watch/hIfAqPy129/',
+                ),
+                TalkTile(
+                  title: 'Harfan Aurat',
+                  imgPath: 'assets/images/harfanaurat.png',
+                  location: 'GDSC Superior University',
+                  talkUrl: 'https://fb.watch/nqKgTvJcCE/',
+                ),
+                TalkTile(
+                  title: 'Colleen - A Tech Queen',
+                  imgPath: 'assets/images/colleen.jpg',
+                  location: 'GDSC Pakistan',
+                  talkUrl: 'https://fb.watch/nqKP5RTAet/',
+                ),
+                TalkTile(
+                  title: 'Getting To Know Flutter',
+                  imgPath: 'assets/images/airukamra.jpg',
+                  location: 'Air U, Kamra',
+                  talkUrl: 'https://www.facebook.com/photo/?fbid=1355197304917077&set=pcb.1355202514916556',
+                ),
+                TalkTile(
+                  title: 'Cloud Seekho',
+                  imgPath: 'assets/images/devfest20cloud.jpg',
+                  location: 'GDG Cloud Devfest20',
+                  talkUrl: 'https://www.youtube.com/watch?v=1jciVUUM-LA',
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 30.0,),
+          const SizedBox(height: 50.0),
+          const Heading(lable: 'My Interests'),
+          const SizedBox(height: 150.0),
           const Heading(lable: 'Let\'s Work Together'),
-          const SizedBox(height: 30.0,),
+          const SizedBox(height: 50.0),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal :MediaQuery.sizeOf(context).width * 0.18),
+            child: Column(
+              children: [
+                const TextField(
+                  style: TextStyle(color: charcoal),
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'NAME',
+                    labelStyle: TextStyle(color: burntSienna),
+                    enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: burntSienna)),
+                    focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: saffron)),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                const TextField(
+                  //todo: add email validation
+                  style: TextStyle(color: charcoal),
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'EMAIL',
+                    labelStyle: TextStyle(color: burntSienna),
+                    enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: burntSienna)),
+                    focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: saffron)),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                const TextField(
+                  maxLines: 3,
+                  style: TextStyle(color: charcoal),
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'MESSAGE',
+                    labelStyle: TextStyle(color: burntSienna),
+                    enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: burntSienna)),
+                    focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: saffron)),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    fixedSize: const Size(double.maxFinite , 60),
+                    backgroundColor: burntSienna
+                  ),
+                  onPressed: () {
+                    //Todo: send me email
+                  },
+                  child: const Text('LET\'S TALK', style: TextStyle(color: Colors.white, letterSpacing: 3),),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 200.0),
           Container(
             alignment: Alignment.center,
             color: charcoal,
@@ -150,7 +209,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Image.asset('assets/images/logo.png', scale: 50,),
                 const SizedBox(height: 10),
                 const Text(
-                  '2023 \u00a9 Eqra Khattak | All rights reserved | Built with ❤️ by Flutter',
+                  '2023 \u00a9 Eqra Khattak | All Rights Reserved | Built with ❤️ by Flutter',
                   style: TextStyle(
                     color: Color(0xFF4C829A),
                   ),
